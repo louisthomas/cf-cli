@@ -1,0 +1,14 @@
+#!/bin/bash 
+set -xe
+
+. ./hooks/env
+#CID=$(docker run -d $IMAGE_NAME)
+#LOGS="$(docker logs $CID)"
+#docker rm -f $CID
+
+docker run -i --rm \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v ${PWD}:/test zemanlx/container-structure-test:v1.6.0-alpine \
+    test \
+    --image $IMAGE_NAME \
+    --config /test/structure-tests.yaml

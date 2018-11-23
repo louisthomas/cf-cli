@@ -1,0 +1,12 @@
+schemaVersion: "2.0.0"
+
+fileExistenceTests:
+  - name: 'config.json'
+    path: '/root/.cf/'
+    shouldExist: true
+  - name: 'App Autoscaler'
+    path: '/root/.cf/plugins'
+    shouldExist: true
+  - name: 'SchedulerForPCF'
+    path: '/root/.cf/plugins'
+    shouldExist: true
