@@ -10,3 +10,6 @@ fileExistenceTests:
   - name: 'SchedulerForPCF'
     path: '/root/.cf/plugins'
     shouldExist: true
+  - name: 'toto'
+    path: '/root/.cf/plugins'
+    shouldExist: false
